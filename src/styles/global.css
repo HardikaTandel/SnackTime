@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap");
+@font-face {
+  font-family: "Cooper Black";
+  src: url("/fonts/COOPBL.woff") format("woff");
+  font-display: swap;
+}
+:root {
+  --rose: #cc6662;
+  --coral: #e7837e;
+  --peach: #f0978a;
+  --olive: #819e3d;
+  --purple: #5a2d7c;
+  --heading: "Baloo 2", cursive;
+  --logo: "Cooper Black", "Baloo 2", cursive;
+  --body: "Poppins", sans-serif;
+  color: #4d3c4c;
+  background: #fffaf7;
+  font-family: var(--body);
+  font-synthesis: none;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  min-width: 320px;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+button {
+  font-family: inherit;
+}
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid var(--olive);
+  outline-offset: 3px;
+}
+.eyebrow {
+  margin: 0;
+  color: var(--rose);
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-weight: 700;
+}
+main {
+  min-height: 100vh;
+}

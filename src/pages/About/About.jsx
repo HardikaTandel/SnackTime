@@ -1,0 +1,31 @@
+import { useState } from 'react';
+import { AnimatePresence, motion } from 'framer-motion';
+import styles from './About.module.css';
+import poemStyles from './AboutPoem.module.css';
+
+const poem = [['Once in a busy city,', 'The one that never stops,', 'Where the little ones sighed for a pause.'], ['Finish your homework, meet the deadline,', 'Mama hushed,', 'C’mon, ma, I am just a kid, they said', 'My day is anyway corporate enough!'], ['The boats were missing in the puddle,', 'Laughter was trapped on phones,', 'Swings stood still, their chains untouched,', 'As play turned into postponed tones.'], ['Yet childhood waits in hopeful hush,', 'By puddles and streams.', 'It lingers in a wild jump,', 'And lives in carefree dreams.'], ['For swings should squeak and puddles splash,', 'And slides should never rust.', 'Let’s bring back the giggles and wonder', 'Before it turns to dust.']];
+
+const founders = [
+  { name: 'Urvashii Thosar', role: 'Co-Founder, Creative Curator', image: '/assets/images/dummy.avif', paragraphs: ['Urvashii brings her expertise as a psychologist, SEL (Social-Emotional Learning) strategist, and an artist into the heart of every experience Snack Time crafts. With an innate ability to blend play, creativity, and emotional intelligence, she designs frameworks that ensure every event and project is a safe space for children to express, connect, and grow.', 'As a performing artist and writer, her world is rich with art, movement, and storytelling, all of which she seamlessly weaves into Snack Time to make self-discovery a joyful adventure. Whether crafting learning experiences that heal young hearts or helping others notice the quiet beauty in small moments, Urvashii is driven by a deep belief in the magic of childhood and the transformative power of human connection.'] },
+  { name: 'Akansha Tandel', role: 'Co-Founder & Experience Curator', image: '/assets/images/dummy.avif', paragraphs: ['Akansha is dedicated to nurturing childhood wonder, genuine connection, and emotional growth. With a deep passion for designing meaningful experiences, she combines the magic of immersive environments, storytelling, and play to craft events that leave lasting imprints on young hearts.', 'When she isn’t shaping the world of Snack Time, Akansha works as a storyteller and travel designer, curating luxurious, culturally rich journeys. Whether she’s designing soulful adventures or creating safe spaces for children to explore their world, Akansha lives by the belief that intentional experiences have the power to heal, inspire, and bring communities together.'] },
+];
+
+function PoemScroll() {
+  const [open, setOpen] = useState(false);
+  return <aside className={poemStyles.wrap} aria-label="SnackTime poem">
+    <AnimatePresence mode="wait">
+      {open ? <motion.div key="paper" className={poemStyles.paper} initial={{ opacity: 0, scaleY: .18 }} animate={{ opacity: 1, scaleY: 1 }} exit={{ opacity: 0, scaleY: .18 }} transition={{ type: 'spring', stiffness: 180, damping: 19 }}>
+        <button className={poemStyles.close} onClick={() => setOpen(false)} aria-label="Close poem">Roll up ↑</button>
+        {poem.map((stanza, index) => <motion.p key={index} initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: .14 + index * .08 }}>{stanza.map((line) => <span key={line}>{line}</span>)}</motion.p>)}
+      </motion.div> : <motion.button key="scroll" className={poemStyles.scroll} onClick={() => setOpen(true)} initial={{ opacity: 0, rotate: 4 }} animate={{ opacity: 1, rotate: 2 }} exit={{ opacity: 0, scale: .8 }} whileHover={{ y: -5, rotate: 0 }} aria-expanded="false"><span className={poemStyles.roll}>✦</span><strong>A little poem</strong><span>Tap to unroll ↓</span></motion.button>}
+    </AnimatePresence>
+  </aside>;
+}
+
+export default function About() {
+  return <motion.section className={styles.page} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
+    <header className={styles.hero}><div><p className="eyebrow">About SnackTime</p><h1>Bringing <em>childhood</em> back to life.</h1><p className={styles.lead}>If you’ve ever looked at a child today and felt a quiet pang of nostalgia, you aren’t alone.</p></div><PoemScroll /></header>
+    <section className={styles.story}><div><p>We live in a world that moves too fast. Childhoods that were once filled with scraped knees, endless curiosity, unstructured play, and real-world wonder are increasingly slipping away into a storm of digital screens, scheduled routines, and virtual connections. Growing up feels rushed. Children are asked to process more, perform faster, and connect through devices rather than shared moments.</p><p className={styles.pause}>Snack Time was born to pause that clock.</p><p>We are a purpose-driven movement dedicated to building a grounded, vibrant community for children in today’s urban setting. We believe childhood isn’t a race to be won or a phase to fast-forward through; it is a sanctuary meant for exploring, creating, feeling, and moving freely.</p><p>Every experience we curate is rooted in intention. By seamlessly blending social-emotional life skills with open-ended art, movement, and play, we create safe, joyful spaces where children don’t just participate; they feel seen, heard, and connected. At Snack Time, we are restoring the magic of human connection and giving children the space to simply <em>be</em>.</p></div></section>
+    <section className={styles.founders}><div className={styles.founderIntro}><p className="eyebrow">Our founders</p><h2>Two visionaries with one shared hope.</h2><p>Behind Snack Time are two visionaries who paused, observed the changing world of children, and decided to co-create the change they wished to see.</p></div><div className={styles.founderGrid}>{founders.map((founder) => <article className={styles.founderCard} key={founder.name}><img className={styles.founderImage} src={founder.image} alt={`${founder.name}, ${founder.role}`} loading="lazy" /><div className={styles.founderCopy}><h3>{founder.name}</h3><p className={styles.role}>{founder.role}</p>{founder.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div></article>)}</div></section>
+  </motion.section>;
+}

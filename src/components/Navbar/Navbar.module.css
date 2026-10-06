@@ -1,0 +1,118 @@
+.wrap {
+  position: fixed;
+  z-index: 20;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 18px clamp(16px, 4vw, 54px);
+  pointer-events: none;
+}
+.nav {
+  max-width: 1200px;
+  margin: auto;
+  min-height: 74px;
+  padding: 7px 10px 7px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid rgba(255, 255, 255, 0.841);
+  border-radius: 22px;
+  background: rgba(208, 179, 209, 0);
+  box-shadow: 0 10px 34px rgba(67, 38, 63, 0.80);
+  backdrop-filter: blur(18px);
+  pointer-events: auto;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 66px;
+  height: 60px;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  font-family: var(--heading);
+  font-size: 0.5rem;
+  font-weight: 800;
+  color: var(--purple);
+  letter-spacing: -0.06em;
+}
+.brand img {
+  display: block;
+  width: 56px;
+  height: auto;
+  filter: drop-shadow(0 2px 3px rgba(41, 26, 42, 0.2));
+}
+.links {
+  display: flex;
+  gap: 4px;
+}
+.link,
+.mobileLink {
+  padding: 10px 16px;
+  border-radius: 14px;
+  font-weight: 600;
+  color: #97169c;
+  transition: 0.2s;
+}
+.link:hover,
+.active {
+  background: #fff0ed;
+  color: var(--rose);
+}
+.menuButton {
+  display: none;
+  border: 0;
+  background: #fff0ed;
+  color: var(--purple);
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  place-items: center;
+}
+.mobileMenu {
+  display: none;
+}
+@media (max-width: 767px) {
+  .wrap {
+    padding: 12px 14px;
+  }
+  .nav {
+    position: relative;
+    border-radius: 18px;
+    min-height: 62px;
+    padding-left: 8px;
+  }
+  .links {
+    display: none;
+  }
+  .menuButton {
+    display: grid;
+  }
+  .mobileMenu {
+    display: grid;
+    gap: 6px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: calc(100% + 8px);
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.96);
+    border-radius: 18px;
+    box-shadow: 0 14px 32px rgba(67, 38, 63, 0.15);
+  }
+  .mobileLink {
+    padding: 13px 16px;
+  }
+  .brand {
+    width: 52px;
+    height: 48px;
+    border-radius: 0;
+  }
+
+  .brand img {
+    width: 44px;
+  }
+}
