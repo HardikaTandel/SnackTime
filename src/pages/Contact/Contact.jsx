@@ -50,7 +50,7 @@ export default function Contact() {
                 {item.href ? (
                   <a href={item.href}>{item.value}</a>
                 ) : (
-                  <strong>{item.value}</strong>
+                  <a>{item.value}</a>
                 )}
               </div>
             ))}

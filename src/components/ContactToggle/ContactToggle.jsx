@@ -5,7 +5,7 @@ import styles from './ContactToggle.module.css';
 
 function ContactToggle() {
   return (
-    <Link className={styles.toggle} to="/about" aria-label="About SnackTime">
+    <Link className={styles.toggle} to="/about" aria-label="About Snack Time">
       <Info size={21} />
       <span>About Us</span>
     </Link>

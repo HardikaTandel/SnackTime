@@ -49,7 +49,7 @@ function Hero() {
           }}
           className={styles.copy}
         >
-          A community-driven ecosystem dedicated to ground level, life-skill focused projects integrating art and play. 
+          A community-driven ecosystem dedicated to ground level, life-skill and SEL focused projects integrating art and play. 
         </motion.p>
 
       </motion.div>

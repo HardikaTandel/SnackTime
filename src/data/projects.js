@@ -211,7 +211,7 @@ export const projects = [
       images: albumImages,
       intro: 'A little collection of big feelings, muddy shoes, bright colours, and the kind of moments that stay with us.',
       sections: [
-        { title: 'Small hands, big worlds.', text: 'Every SnackTime gathering holds a new story. These frames are tiny windows into the play, conversation, laughter, and curiosity we share together.' },
+        { title: 'Small hands, big worlds.', text: 'Every Snack Time gathering holds a new story. These frames are tiny windows into the play, conversation, laughter, and curiosity we share together.' },
         { title: 'Made of moments.', text: 'The best parts of childhood are often the unplanned ones: a friend found in a workshop, paint on a sleeve, a question asked without fear, and a day remembered long after it ends.' },
       ],
     },

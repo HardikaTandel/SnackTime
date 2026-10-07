@@ -106,7 +106,7 @@ function PastProjectsDetails({ project }) {
       <h1>{project.title}</h1>
       <p>Little moments that are building this community.</p>
     </header>
-    <section className={styles.eventGrid} aria-label="Past SnackTime events">
+    <section className={styles.eventGrid} aria-label="Past Snack Time events">
       {events.map((event, index) => <motion.article className={styles.eventCard} key={event.title} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: .1 }} transition={{ delay: Math.min(index * .04, .25) }}><img src={event.image} alt={`${event.title} event`} loading="lazy" /><div><span>Past event</span><h2>{event.title}</h2><p>{event.text}</p></div></motion.article>)}
     </section>
     <section className={styles.pastPartnerSection}>
@@ -121,7 +121,7 @@ function AlbumDetails({ project }) {
   const { images, intro, sections } = project.details;
   const directions = [{ x: '-110vw', y: -30 }, { x: '110vw', y: 20 }, { x: -40, y: '-110vh' }, { x: 30, y: '110vh' }];
   return <>
-    <section className={styles.albumHero} aria-label="SnackTime photo album">
+    <section className={styles.albumHero} aria-label="Snack Time photo album">
       <Link to="/projects" className={styles.albumBack}><ArrowLeft /> Back to projects</Link>
       <div className={styles.albumCollage}>{images.map((image, index) => { const direction = directions[index % directions.length]; return <motion.img key={`${image}-${index}`} className={styles.albumPhoto} src={image} alt={`SnackTime memory ${index + 1}`} initial={{ opacity: 0, x: direction.x, y: direction.y, rotate: (index % 2 ? 1 : -1) * (16 + index % 5) * 2, scale: .55 }} animate={{ opacity: 1, x: 0, y: 0, rotate: 0, scale: 1 }} transition={{ type: 'spring', stiffness: 56, damping: 14, delay: .12 + index * .055 }} />; })}</div>
     </section>
