@@ -80,7 +80,7 @@ function FutureHumanDetails({ project }) {
       <Link to="/projects" className={styles.communityBack}><ArrowLeft /> Back to projects</Link>
       <p className="eyebrow">{project.label}</p>
       <h1>{project.title}</h1>
-      <p>India’s first subject-integrated SEL curriculum</p>
+      <p>Subject Integrated Life Skills & SEL Program </p>
     </header>
     <section className={styles.futureOpening}>
       <div><p className="eyebrow">The question</p><h2>{openingTitle}</h2>{opening.map((paragraph, index) => <p className={index === 0 ? styles.futureLead : ''} key={paragraph}>{paragraph}</p>)}</div>
@@ -92,7 +92,7 @@ function FutureHumanDetails({ project }) {
     </section>
     <section className={styles.problemSection}><p className="eyebrow">The problem</p><h2>Why the old model falls short.</h2><p>{problem}</p></section>
     <section className={styles.solutionsSection}><p className="eyebrow">How our curriculum solves it</p><h2>Academic learning becomes a vehicle for character building.</h2><div>{solutions.map((solution, index) => <article key={solution.title}><span>0{index + 1}</span><h3>{solution.title}</h3><p>{solution.text}</p></article>)}</div></section>
-    <section className={styles.futureClosing}><ProjectImage src={galleryImage} alt="Future Human Project gallery" /><div><p className={styles.tagline}>{tagline}</p><p>💬 Join us as we redefine classroom learning — follow us on <a href={instagramUrl} target="_blank" rel="noreferrer">Instagram @yourhandle</a>.</p></div></section>
+    <section className={styles.futureClosing}><ProjectImage src={galleryImage} alt="Future Human Project gallery" /><div><p className={styles.tagline}>{tagline}</p><p>💬 Join us as we redefine classroom learning — follow us on <a href={instagramUrl} target="_blank" rel="noreferrer">Instagram</a>.</p></div></section>
   </>;
 }
 
