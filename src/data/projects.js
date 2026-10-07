@@ -35,13 +35,13 @@ const albumImages = [
 export const projects = [
   {
     id: 'community',
-    label: 'SnackTime Experiences',
+    label: 'Snack Time Experiences',
     title: 'Community',
     description: 'Play. Explore. Create. Connect.',
     image: '/assets/images/community_hero.webp',
     layout: 'community',
     details: {
-      story: 'They say it takes a village, and this is ours. Snack Time grew from a single shared moment into a vibrant, supportive community dedicated to giving children the gift of unhurried play. Together, we open up doors to outdoor adventures, creative workshops, and perspective-shaping experiences. It’s a shared journey where kids learn life skills naturally, and every family finds a warm seat at the table.',
+      story: 'They say it takes a village, and this is ours. Snack Time grew from a single shared moment into a vibrant, supportive community dedicated to giving children the gift of unhurried play. Together, we open up doors to outdoor adventures, creative workshops, and perspective-shaping experiences. It’s a shared journey where kids learn life and social-emotional skills naturally, and every family finds a warm seat at the table.',
       tagline: 'Play. Explore. Create. Connect.',
       instagramUrl: 'https://instagram.com/yourhandle',
       // Replace or add public image paths here; each slot renders in this order.
@@ -74,7 +74,7 @@ export const projects = [
   },
   {
     id: 'ehsaas',
-    label: 'SnackTime Project',
+    label: 'Snack Time Project',
     title: 'Ehsaas',
     description: 'A city wide social impact initiative by Snack Time',
     image: '/assets/images/ehsaas_hero.webp',
@@ -125,7 +125,7 @@ export const projects = [
   },
   {
     id: 'futureHumanProject',
-    label: 'SnackTime Project',
+    label: 'Snack Time Project',
     title: 'The Future Human Project',
     description: 'Subject Integrated Life Skills & SEL Program ',
     image: '/assets/images/future_human_hero.webp',
@@ -140,7 +140,7 @@ export const projects = [
       selTitle: 'Moving Beyond the “Isolated SEL” Problem',
       sel: [
         'Traditional Social-Emotional Learning (SEL) often fails because it is treated as a secondary, non-graded “filler” period squeezed between core academic subjects. Squeezing an empathy lecture between intense science or math lessons causes a jarring mental switch, leaving students to perceive life skills as disconnected from their “real” education.',
-        'The Future Human Project is India’s first subject-integrated, zero-teacher-burden initiative designed to nurture whole-child development across primary education. Built on the core belief that life skills should be deeply immersive rather than reduced to worksheets and lectures, the project seamlessly embeds social-emotional learning (SEL) directly into core academic subjects like Science, English, Arts, and Social Science.',
+        'The Future Human Project is a Subject-integrated, zero-teacher-burden initiative designed to nurture whole-child development across primary education. Built on the core belief that life skills should be deeply immersive rather than reduced to worksheets and lectures, the project seamlessly embeds social-emotional learning (SEL) and life skills directly into core academic subjects like Science, English, Arts, and Social Science.',
       ],
       pillars: ['Knowing Yourself', 'Knowing Others', 'Knowing the World', 'Knowing Nature'],
       pillarText: 'Guided by four developmental pillars, it transforms everyday academic topics into experiential doorways that foster emotional resilience, critical reasoning, and ethical clarity in young learners.',
@@ -159,7 +159,7 @@ export const projects = [
   },
   {
     id: 'past-projects',
-    label: 'SnackTime Experiences',
+    label: 'Snack Time Experiences',
     title: 'Past Projects',
     description: 'Little moments that are building this community.',
     image: '/assets/images/past_projects_hero.png',
@@ -202,7 +202,7 @@ export const projects = [
   {
     id: 'album',
     visible: false,
-    label: 'SnackTime Project',
+    label: 'Snack Time Project',
     title: 'Album',
     description: 'Enter to relive childhood ',
     image: placeholderImage,
@@ -219,7 +219,7 @@ export const projects = [
   {
     id: 'blog',
     visible: false,
-    label: 'SnackTime Project',
+    label: 'Snack Time Project',
     title: 'Blog',
     description: 'Growing good things together, one seed at a time.',
     image: placeholderImage,

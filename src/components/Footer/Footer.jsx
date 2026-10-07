@@ -3,7 +3,7 @@ import styles from './Footer.module.css';
 
 function Footer() {
   return <footer className={styles.footer}>
-    <p>© {new Date().getFullYear()} SnackTime. All rights reserved.</p>
+    <p>© {new Date().getFullYear()} Snack Time. All rights reserved.</p>
   </footer>;
 }
 
