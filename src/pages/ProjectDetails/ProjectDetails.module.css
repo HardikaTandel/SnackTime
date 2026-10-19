@@ -57,7 +57,7 @@
   overflow: hidden;
   border-radius: 25px;
   background: #fff;
-  box-shadow: 0 12px 27px rgba(76, 44, 73, 0.09);
+  box-shadow: 0 12px 27px rgba(76, 44, 73, 0.14);
 }
 .eventCard:nth-child(3n + 2) {
   background: #fff2ee;
@@ -753,6 +753,11 @@ aside svg {
   .ehsaasClosing,
   .partnerSection {
     width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .ehsaasHeader {
+    margin-top: 124px;
   }
   .ehsaasIntro {
     grid-template-columns: 1fr;

@@ -3,7 +3,6 @@ import { AnimatePresence } from 'framer-motion';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
-import ContactToggle from './components/ContactToggle/ContactToggle';
 
 const Home = lazy(() => import('./pages/Home/Home'));
 const About = lazy(() => import('./pages/About/About'));
@@ -17,7 +16,9 @@ function LoadingFallback() {
 
 function App() {
   const location = useLocation();
-  return <><Navbar /><main><AnimatePresence mode="wait">
+  const isHome = location.pathname === '/';
+
+  return <div className={isHome ? 'homeShell' : undefined}><Navbar /><main className={isHome ? 'homeMain' : undefined}><AnimatePresence mode="wait">
     <Suspense fallback={<LoadingFallback />}>
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={<Home />} /><Route path="/about" element={<About />} />
@@ -25,7 +26,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
       </Routes>
     </Suspense>
-  </AnimatePresence></main><ContactToggle /><Footer /></>;
+  </AnimatePresence></main><Footer /></div>;
 }
 
 export default App;

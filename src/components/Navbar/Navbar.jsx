@@ -6,6 +6,7 @@ import styles from "./Navbar.module.css";
 
 const links = [
   { to: "/", label: "Home" },
+  { to: "/about", label: "About Us" },
   { to: "/projects", label: "Projects" },
   { to: "/contact", label: "Contact" },
 ];

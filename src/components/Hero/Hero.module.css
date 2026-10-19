@@ -1,6 +1,6 @@
 .hero {
-  height: 100svh;
-  min-height: 640px;
+  height: 100%;
+  min-height: 0;
   position: relative;
   display: grid;
   place-items: center;
@@ -60,10 +60,21 @@
   color: #fff9f7;
 }
 @media (max-width: 600px) {
-  .hero {
-    min-height: 590px;
-  }
   .content h1 {
     font-size: 4.6rem;
+  }
+}
+@media (max-width: 380px) {
+  .content {
+    width: calc(100% - 28px);
+  }
+  .content h1 {
+    font-size: 3.8rem;
+  }
+  .eyebrow {
+    font-size: 0.78rem;
+  }
+  .copy {
+    font-size: 0.94rem;
   }
 }
