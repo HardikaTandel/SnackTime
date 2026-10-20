@@ -792,6 +792,25 @@ aside svg {
 }
 @media (max-width: 700px) {
   .ehsaasHeader,
+  .communityHeader {
+    grid-template-columns: 1fr;
+  }
+  .ehsaasHeader .communityBack,
+  .communityHeader .communityBack {
+    grid-column: 1;
+    grid-row: auto;
+    justify-self: center;
+    margin-bottom: 34px;
+  }
+  .ehsaasHeader > .eyebrow,
+  .communityHeader > .eyebrow,
+  .ehsaasHeader h1,
+  .ehsaasHeader > p:last-child,
+  .communityHeader h1 {
+    grid-column: 1;
+    grid-row: auto;
+  }
+  .ehsaasHeader,
   .ehsaasIntro,
   .impact,
   .ehsaasClosing,

@@ -1,9 +1,29 @@
-import { memo } from "react";
+import { memo, useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import styles from "./Hero.module.css";
 function Hero() {
+  const [heroFontReady, setHeroFontReady] = useState(false);
+
+  useEffect(() => {
+    let active = true;
+    const fontSet = document.fonts;
+
+    if (!fontSet) {
+      setHeroFontReady(true);
+      return undefined;
+    }
+
+    fontSet.load('400 1em "Cooper Black"').finally(() => {
+      if (active) setHeroFontReady(true);
+    });
+
+    return () => {
+      active = false;
+    };
+  }, []);
+
   return (
-    <section className={styles.hero}>
+    <section className={styles.hero} aria-busy={!heroFontReady}>
       <div className={styles.videoFallback} />
       <video
         className={styles.video}
@@ -16,7 +36,7 @@ function Hero() {
         <source src="/assets/videos/hero-background.mp4" type="video/mp4" />
       </video>
       <div className={styles.overlay} />
-      <motion.div
+      {heroFontReady && <motion.div
         className={styles.content}
         initial="hidden"
         animate="show"
@@ -52,7 +72,7 @@ function Hero() {
           A community-driven ecosystem dedicated to ground level, life-skill and SEL focused projects integrating art and play. 
         </motion.p>
 
-      </motion.div>
+      </motion.div>}
     </section>
   );
 }
