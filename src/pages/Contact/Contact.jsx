@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { ChevronRight } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 import { contactInfo } from "../../data/contactInfo";
 import styles from "./Contact.module.css";
 export default function Contact() {
@@ -26,13 +26,13 @@ export default function Contact() {
             className={selected === "business" ? styles.selected : ""}
             onClick={() => setSelected("business")}
           >
-            Snack Time <ChevronRight />
+            Snack Time <ChevronDown />
           </button>
           <button
             className={selected === "general" ? styles.selected : ""}
             onClick={() => setSelected("general")}
           >
-            Ehsaas <ChevronRight />
+            Ehsaas <ChevronDown />
           </button>
         </div>
         <AnimatePresence mode="wait">
