@@ -561,6 +561,30 @@ aside svg {
   text-align: center;
   margin-bottom: 62px;
 }
+.ehsaasHeader,
+.communityHeader {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  align-items: center;
+}
+.ehsaasHeader .communityBack,
+.communityHeader .communityBack {
+  position: static;
+  grid-column: 1;
+  grid-row: 1;
+  justify-self: start;
+  margin: 0;
+}
+.ehsaasHeader > .eyebrow,
+.communityHeader > .eyebrow {
+  grid-column: 2;
+  grid-row: 1;
+}
+.ehsaasHeader h1,
+.ehsaasHeader > p:last-child,
+.communityHeader h1 {
+  grid-column: 1 / -1;
+}
 .ehsaasHeader h1 {
   margin: 14px 0 10px;
   color: var(--purple);
@@ -744,6 +768,26 @@ aside svg {
 @media (max-width: 850px) {
   .metrics {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 701px) and (max-width: 900px) {
+  .ehsaasHeader,
+  .ehsaasIntro,
+  .impact,
+  .ehsaasClosing,
+  .partnerSection {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+  .ehsaasHeader {
+    margin-top: 160px;
+  }
+  .ehsaasIntro {
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+    gap: 32px;
+  }
+  .introCopy {
+    min-width: 0;
   }
 }
 @media (max-width: 700px) {
