@@ -29,7 +29,7 @@ function CommunityDetails({ project }) {
     </section>
     <section className={styles.communityClosing}>
       <p className={styles.tagline}>{tagline}</p>
-      <p className={styles.join}>Join the village: See what we’re up to every day and be part of the story over on <a href={instagramUrl} target="_blank" rel="noreferrer">Instagram</a>.</p>
+      <p className={styles.join}>Join the village: See what we’re up to every day and be part of the story over on <a href="https://www.instagram.com/at.snacktime?igsh=MTN4N2FocjZxOXVjZA%3D%3D&utm_source=qr" target="_blank" rel="noreferrer">Instagram</a>.</p>
     </section>
     <section className={styles.placeholderGallery} aria-label="Community image placeholders">
       {galleryImages.map((image, index) => <ProjectImage key={`${image}-${index}`} src={image} alt={`Community gallery ${index + 1}`} />)}
