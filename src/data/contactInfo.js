@@ -2,10 +2,16 @@ export const contactInfo = {
   business: [
     {
       label: "Snack Time email",
-      value: "community@atsnacktime.com ",
-      href: "mailto:community@atsnacktime.com ",
+      value: "community@atsnacktime.com",
+      href: "mailto:community@atsnacktime.com",
     },
-    { label: "Phone", value: "8169073581 / 7021561047 ", href: "tel:8169073581 / 7021561047 " },
+    {
+      label: "Phone",
+      links: [
+        { value: "8169073581", href: "tel:+918169073581" },
+        { value: "7021561047", href: "tel:+917021561047" },
+      ],
+    },
   
     {
       label: "Instagram",
@@ -16,14 +22,20 @@ export const contactInfo = {
   general: [
     {
       label: "Ehsaas email",
-      value: "ehsaas@atsnacktime.com ",
-      href: "mailto:ehsaas@atsnacktime.com ",
+      value: "ehsaas@atsnacktime.com",
+      href: "mailto:ehsaas@atsnacktime.com",
     },
-    { label: "contact", value: "8169073581 / 7021561047 " },
+    {
+      label: "Contact",
+      links: [
+        { value: "8169073581", href: "tel:+918169073581" },
+        { value: "7021561047", href: "tel:+917021561047" },
+      ],
+    },
     {
       label: "Instagram",
       value: "@ehsaasbysnacktime",
-      href: "https://www.instagram.com/ehsaasbysnacktime?igsh=cWFjOGo4ZnBydGZ0&utm_source=qr ",
+      href: "https://www.instagram.com/ehsaasbysnacktime?igsh=cWFjOGo4ZnBydGZ0&utm_source=qr",
     },
 
   ],

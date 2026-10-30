@@ -47,10 +47,16 @@ export default function Contact() {
             {contactInfo[selected].map((item) => (
               <div className={styles.item} key={item.label}>
                 <span>{item.label}</span>
-                {item.href ? (
+                {item.links ? (
+                  <div className={styles.phoneLinks}>
+                    {item.links.map((phone, index) => <span key={phone.href}>
+                      {index > 0 && " / "}<a href={phone.href}>{phone.value}</a>
+                    </span>)}
+                  </div>
+                ) : item.href ? (
                   <a href={item.href}>{item.value}</a>
                 ) : (
-                  <a>{item.value}</a>
+                  <span className={styles.value}>{item.value}</span>
                 )}
               </div>
             ))}

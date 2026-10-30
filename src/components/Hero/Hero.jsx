@@ -31,7 +31,6 @@ function Hero() {
         muted
         loop
         playsInline
-        poster="https://images.unsplash.com/photo-1489710437720-ebb67ec84dd2?auto=format&fit=crop&w=1800&q=80"
       >
         <source src="/assets/videos/hero-background.mp4" type="video/mp4" />
       </video>
