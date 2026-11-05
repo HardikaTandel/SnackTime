@@ -54,7 +54,13 @@ export default function Contact() {
                     </span>)}
                   </div>
                 ) : item.href ? (
-                  <a href={item.href}>{item.value}</a>
+                  <a
+                    href={item.href}
+                    target={item.label === "Instagram" ? "_blank" : undefined}
+                    rel={item.label === "Instagram" ? "noopener noreferrer" : undefined}
+                  >
+                    {item.value}
+                  </a>
                 ) : (
                   <span className={styles.value}>{item.value}</span>
                 )}

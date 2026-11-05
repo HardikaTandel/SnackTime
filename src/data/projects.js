@@ -44,7 +44,6 @@ export const projects = [
       story: 'They say it takes a village, and this is ours. Snack Time grew from a single shared moment into a vibrant, supportive community dedicated to giving children the gift of unhurried play. Together, we open up doors to outdoor adventures, creative workshops, and perspective-shaping experiences. It’s a shared journey where kids learn life and social-emotional skills naturally, and every family finds a warm seat at the table.',
       tagline: 'Play. Explore. Create. Connect.',
       instagramUrl: 'https://www.instagram.com/at.snacktime?igsh=MTN4N2FocjZxOXVjZA%3D%3D&utm_source=qr',
-      // Replace or add public image paths here; each slot renders in this order.
       featureImage: '/assets/images/community_dump1.webp',
       galleryImages: [
         '/assets/images/community_dump1.webp',
